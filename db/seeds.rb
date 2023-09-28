@@ -5,3 +5,79 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+puts 'Seeding Trails 🥾'
+
+Trail.create([
+  {
+    trail_name: "Big South Trail",
+    length: 13.7,
+    elevation: 1696,
+    location: "Roosevelt National Forest",
+    difficulty: 3
+  },
+  {
+    trail_name: "Arthur's Rock Trail",
+    length: 3.2,
+    elevation: 1099,
+    location: "Lory State Park",
+    difficulty: 2
+  },
+  {
+    trail_name: "Sky Pond via Glacier Gorge Trail",
+    length: 8.6,
+    elevation: 1771,
+    location: "Rocky Mountain National Park",
+    difficulty: 3
+  },
+  {
+    trail_name: "Anne U. White Trail",
+    length: 3.2,
+    elevation: 485,
+    location: "Boulder County Parks and Open Space",
+    difficulty: 1
+  },
+  {
+    trail_name: "Medicine Bow Peak via Lakes Trail Loop",
+    length: 6.7,
+    elevation: 1712,
+    location: "Medicine Bow-Routt National Forest",
+    difficulty: 3
+  },
+  {
+    trail_name: "Mount Ellen Peak Trail",
+    length: 5.6,
+    elevation: 1843,
+    location: "Mount Ellen-Blue Hills Wilderness Study Area",
+    difficulty: 3
+  },
+  {
+    trail_name: "Grays and Torreys Peak",
+    length: 8.1,
+    elevation: 3599,
+    location: "Arapaho National Forest",
+    difficulty: 3
+  },
+  {
+    trail_name: "Zion Narrows: Bottom Up to Big Springs",
+    length: 8.9,
+    elevation: 695,
+    location: "Zion National Park",
+    difficulty: 3
+  },
+  {
+    trail_name: "Zebra Canyon",
+    length: 5.2,
+    elevation: 377,
+    location: "Grand Staircase - Escalante National Monument",
+    difficulty: 2
+  },
+  {
+    trail_name: "The Golden Cathedral Trail",
+    length: 9.4,
+    elevation: 1446,
+    location: "Glen Canyon National Recreation Area",
+    difficulty: 2
+  }
+])
+
+puts 'Done Seeding Trails 🥾'
