@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  trail_name: MyString
+  length: 1
+  elevation: 1
+  location: MyString
+  difficulty: 1
+
+two:
+  trail_name: MyString
+  length: 1
+  elevation: 1
+  location: MyString
+  difficulty: 1
