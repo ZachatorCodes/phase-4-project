@@ -9,4 +9,6 @@ Rails.application.routes.draw do
 
   # Handles non-API route requests
   get '*path', to: 'fallback#index', constraints: ->(req) { !req.xhr? && req.format.html? }
+
+  get '/login', to: 'sessions#create'
 end
