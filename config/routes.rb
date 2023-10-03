@@ -10,5 +10,7 @@ Rails.application.routes.draw do
   # Handles non-API route requests
   get '*path', to: 'fallback#index', constraints: ->(req) { !req.xhr? && req.format.html? }
 
+  # Log-in and log-out routes
   get '/login', to: 'sessions#create'
+  get '/logout', to: 'sessions#destroy'
 end
