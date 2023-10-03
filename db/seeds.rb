@@ -7,7 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 puts 'Seeding Trails 🥾'
 
-Trail.create([
+Trail.create!([
   {
     trail_name: "Big South Trail",
     length: 13.7,
@@ -81,3 +81,19 @@ Trail.create([
 ])
 
 puts 'Done Seeding Trails 🥾'
+
+puts 'Seeding Users 🧑'
+
+User.create!([
+  {
+    first_name: "Bunky",
+    last_name: "Chunky",
+    email: "chunkybunky@bunk.com",
+    username: "ChunkyBunky",
+    password: "bunkypassword123",
+    password_confirmation: "bunkypassword123",
+    bio: "I'm a cat who's all about that!"
+  }
+])
+
+puts 'Done Seeding Users 🧑'
