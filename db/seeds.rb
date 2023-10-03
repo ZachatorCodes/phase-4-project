@@ -81,7 +81,7 @@ Trail.create!([
 ])
 
 puts 'Done Seeding Trails 🥾'
-
+puts '____________________'
 puts 'Seeding Users 🧑'
 
 User.create!([
@@ -97,3 +97,4 @@ User.create!([
 ])
 
 puts 'Done Seeding Users 🧑'
+puts '____________________'
