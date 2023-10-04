@@ -3,7 +3,7 @@ class CreateReviews < ActiveRecord::Migration[7.0]
     create_table :reviews do |t|
       t.belongs_to :trail, null: false, foreign_key: true
       t.belongs_to :user, null: false, foreign_key: true
-      t.string :rating
+      t.integer :rating
       t.string :comment
 
       t.timestamps
