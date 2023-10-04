@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+puts '____________________'
 puts 'Seeding Trails 🥾'
 
 Trail.create!([
@@ -86,13 +87,22 @@ puts 'Seeding Users 🧑'
 
 User.create!([
   {
-    first_name: "Bunky",
-    last_name: "Chunky",
+    first_name: "Chunky",
+    last_name: "Bunky",
     email: "chunkybunky@bunk.com",
     username: "ChunkyBunky",
     password: "bunkypassword123",
     password_confirmation: "bunkypassword123",
     bio: "I'm a cat who's all about that!"
+  },
+  {
+    first_name: "Banjo",
+    last_name: "Kazooie",
+    email: "bearandbird@n64.com",
+    username: "BearAndBird",
+    password: "bestbeararound64!",
+    password_confirmation: "bestbeararound64!",
+    bio: "I like to think I'm better than Mario."
   }
 ])
 
