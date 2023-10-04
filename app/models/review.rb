@@ -3,4 +3,5 @@ class Review < ApplicationRecord
   belongs_to :user
 
   validates :trail_id, :user_id, :rating, :comment, presence: true
+  validates :rating, numericality: { only_integer: true, less_than_or_equal_to: 10, greater_than_or_equal_to: 1}
 end
