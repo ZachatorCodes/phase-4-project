@@ -120,7 +120,7 @@ Review.create!([
   {
     trail_id: 2,
     user_id: 2,
-    rating: "hello there",
+    rating: 3,
     comment: "I give it a meh >:("
   }
 ])
