@@ -5,6 +5,7 @@ class SessionsController < ApplicationController
     # login function
     user = User.find_by(username: params[:username])
     if user&.authenticate(params[:password])
+      # adds user id to session after login
       session[:user_id] = user.id
       render json: user, status: :created
     else
