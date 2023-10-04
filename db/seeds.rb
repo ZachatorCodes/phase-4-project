@@ -81,7 +81,7 @@ Trail.create!([
   }
 ])
 
-puts 'Done Seeding Trails 🥾'
+puts 'Done Seeding Trails ✅'
 puts '____________________'
 puts 'Seeding Users 🧑'
 
@@ -106,5 +106,24 @@ User.create!([
   }
 ])
 
-puts 'Done Seeding Users 🧑'
+puts 'Done Seeding Users ✅'
+puts '____________________'
+puts 'Seeding Reviews 📝'
+
+Review.create!([
+  {
+    trail_id: 1,
+    user_id: 1,
+    rating: 10,
+    comment: "Super cool trail!"
+  },
+  {
+    trail_id: 2,
+    user_id: 2,
+    rating: "hello there",
+    comment: "I give it a meh >:("
+  }
+])
+
+puts 'Done Seeding Reviews ✅'
 puts '____________________'
