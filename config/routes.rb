@@ -13,4 +13,8 @@ Rails.application.routes.draw do
   # Log-in and log-out routes
   get '/login', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'
+
+  # User routes
+  get "/me", to: "users#show"
+  post "/signup", to: "users#create"
 end
