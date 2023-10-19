@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Jost");
 
-.logged-in-navbar h3 {
-  display: inline-block;
-}
-
 .logged-out-home {
   display: flex;
   flex-direction: column;
@@ -15,6 +11,21 @@
 
 .logged-out-home h1 {
   font-size: 80px;
+  font-family: "Jost", sans-serif;
+  color: black;
+}
+
+.logged-in-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 95.3vh;
+}
+
+.logged-in-home h3 {
+  font-size: 40px;
   font-family: "Jost", sans-serif;
   color: black;
 }
