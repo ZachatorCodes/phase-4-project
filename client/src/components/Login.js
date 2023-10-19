@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { UserContext } from "../context/user";
 import { useNavigate } from "react-router-dom";
+import Navbar from "./Navbar";
 
 function Login() {
   const navigate = useNavigate();
@@ -24,7 +25,7 @@ function Login() {
           login(user);
           navigate("/");
         } else {
-          setError(<li>{user.error}</li>)
+          setError(<li>{user.error}</li>);
         }
       });
   }
@@ -42,28 +43,31 @@ function Login() {
   }
 
   return (
-    <div className="Login">
-      <h1>Login</h1>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="username"
-          onChange={handleChange}
-          value={userInfo.username}
-          placeholder="Username"
-          autoComplete="username"
-        ></input>
-        <input
-          type="password"
-          name="password"
-          onChange={handleChange}
-          value={userInfo.password}
-          placeholder="Password"
-          autoComplete="current-password"
-        ></input>
-        <button type="submit">Log In</button>
-      </form>
-      <ul>{error}</ul>
+    <div className="login">
+      <Navbar />
+      <div className="login-content">
+        <h1>Login</h1>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="username"
+            onChange={handleChange}
+            value={userInfo.username}
+            placeholder="Username"
+            autoComplete="username"
+          ></input>
+          <input
+            type="password"
+            name="password"
+            onChange={handleChange}
+            value={userInfo.password}
+            placeholder="Password"
+            autoComplete="current-password"
+          ></input>
+          <button type="submit">Log In</button>
+        </form>
+        <ul>{error}</ul>
+      </div>
     </div>
   );
 }
