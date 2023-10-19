@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Jost");
+
 .logged-in-navbar h3 {
   display: inline-block;
 }
@@ -13,9 +15,8 @@
 
 .logged-out-home h1 {
   font-size: 80px;
-  font-family: "Tahoma", sans-serif;
-  color: white;
-  -webkit-text-stroke: 3px #000;
+  font-family: "Jost", sans-serif;
+  color: black;
 }
 
 .home-button {
@@ -114,4 +115,32 @@ html, body {
   align-items: center;
   text-align: center;
   min-height: 95.3vh;
+}
+
+.signup-background {
+  background-image: url("../public/signup-background.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.signup-background h1 {
+  font-size: 50px;
+  font-family: 'Jost', sans-serif;;
+  color: white;
+}
+
+.login-background {
+  background-image: url("../public/login-background.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.login-background h1 {
+  font-size: 50px;
+  font-family: 'Jost', sans-serif;;
+  color: white;
 }
