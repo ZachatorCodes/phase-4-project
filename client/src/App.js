@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import { UserProvider } from "./context/user";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
+import Navbar from "./components/Navbar";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -18,6 +19,7 @@ function App() {
   return (
     <div className="App">
       <UserProvider>
+        <Navbar />
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/signup" element={<Signup />} />
