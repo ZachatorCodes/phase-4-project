@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   # User and session routes
   post '/login', to: 'sessions#create'
-  get '/logout', to: 'sessions#destroy'
+  delete '/logout', to: 'sessions#destroy'
   get "/me", to: "users#show"
   post "/signup", to: "users#create"
 
