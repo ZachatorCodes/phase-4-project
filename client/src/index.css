@@ -97,3 +97,21 @@ html, body {
   box-shadow: none;
   color: #2c5777;
 }
+
+.login-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 95.3vh;
+}
+
+.signup-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 95.3vh;
+}
