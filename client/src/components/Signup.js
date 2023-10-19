@@ -52,7 +52,7 @@ function Signup() {
   }
 
   return (
-    <div className="signup">
+    <div className="signup-background">
       <Navbar />
       <div className="signup-content">
         <h1>Sign Up</h1>

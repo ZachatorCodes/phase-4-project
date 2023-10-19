@@ -43,7 +43,7 @@ function Login() {
   }
 
   return (
-    <div className="login">
+    <div className="login-background">
       <Navbar />
       <div className="login-content">
         <h1>Login</h1>
