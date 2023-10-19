@@ -6,25 +6,34 @@ const UserContext = createContext();
 // Create Provider Component
 function UserProvider({ children }) {
   const [user, setUser] = useState(null);
+  const [loggedIn, setLoggedIn] = useState(false);
 
   useEffect(() => {
     fetch("/me")
       .then((r) => r.json())
       .then((data) => {
-        setUser(data);
+        if (data.errors) {
+          setLoggedIn(false);
+        } else {
+          setUser(data);
+          setLoggedIn(true);
+        }
       });
   }, []);
 
   const login = (user) => {
-    setUser(user)
+    setUser(user);
+    setLoggedIn(true);
   };
 
   const logout = () => {
-    setUser(null)
+    setUser(null);
+    setLoggedIn(false);
   };
 
   const signup = (user) => {
-    setUser(user)
+    setUser(user);
+    setLoggedIn(true);
   };
 
   return (
