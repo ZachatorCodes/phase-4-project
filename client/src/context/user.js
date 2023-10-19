@@ -18,6 +18,7 @@ function UserProvider({ children }) {
         } else {
           setUser(data);
           setLoggedIn(true);
+          fetchTrails();
         }
       });
   }, []);
