@@ -20,8 +20,7 @@ function Navbar() {
   if (loggedIn) {
     return (
       <div className="logged-in-navbar">
-        <button onClick={logoutUser}>Logout</button>
-        <h3>Hello {user.first_name} "{user.username}" {user.last_name}</h3>
+        <button className="navbar-button" onClick={logoutUser}>Logout</button>
       </div>
     );
   } else {
