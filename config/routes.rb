@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   resources :trails, only: :index
 
   # User and session routes
-  get '/login', to: 'sessions#create'
+  post '/login', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'
   get "/me", to: "users#show"
   post "/signup", to: "users#create"
