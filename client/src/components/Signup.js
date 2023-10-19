@@ -32,15 +32,6 @@ function Signup() {
           signup(user);
           navigate("/");
         } else {
-          // setUserInfo({
-          //   first_name: "",
-          //   last_name: "",
-          //   email: "",
-          //   username: "",
-          //   password: "",
-          //   password_confirmation: "",
-          //   bio: "",
-          // });
           const userErrors = user.errors.map((e) => <li>{e}</li>);
           setErrorList(userErrors);
         }
