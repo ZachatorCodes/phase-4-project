@@ -1,14 +1,19 @@
 import React, { useContext } from "react";
 import { UserContext } from "../context/user";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 function Navbar() {
   const { user, logout } = useContext(UserContext);
+  const navigate = useNavigate();
 
   function logoutUser() {
-    fetch("/logout")
+    fetch("/logout", {
+      method: "DELETE",
+      headers: {"Content-Type": "application/json"}
+    })
     .then(() => {
       logout();
+      navigate("/")
     });
   }
 
@@ -16,7 +21,7 @@ function Navbar() {
     return (
       <div className="LoggedInNavbar">
         <button onClick={logoutUser}>Logout</button>
-        <h3>Hello {user.first_name}</h3>
+        <h3>Hello {user.first_name} "{user.username}" {user.last_name}</h3>
       </div>
     );
   } else {
