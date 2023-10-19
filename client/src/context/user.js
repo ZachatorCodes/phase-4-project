@@ -15,11 +15,17 @@ function UserProvider({ children }) {
       });
   }, []);
 
-  const login = () => {};
+  const login = (user) => {
+    setUser(user)
+  };
 
-  const logout = () => {};
+  const logout = () => {
+    setUser(null)
+  };
 
-  const signup = () => {};
+  const signup = (user) => {
+    setUser(user)
+  };
 
   return (
     <UserContext.Provider value={{ user, login, logout, signup }}>
