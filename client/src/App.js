@@ -6,23 +6,28 @@ import { UserProvider } from "./context/user";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
 import Navbar from "./components/Navbar";
+import TrailForm from "./components/TrailForm";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [trails, setTrails] = useState([]);
 
   useEffect(() => {
-    fetch("/hello")
+    fetch("/trails")
       .then((r) => r.json())
-      .then((data) => setCount(data.count));
+      .then((trails) => {
+        setTrails(trails);
+        console.log(trails);
+      });
   }, []);
 
   return (
     <div className="App">
       <UserProvider>
         <Routes>
-          <Route exact path="/" element={<Home />} />
           <Route exact path="/signup" element={<Signup />} />
           <Route exact path="/login" element={<Login />} />
+          <Route exact path="/addtrail" element={<TrailForm />} />
+          <Route exact path="/" element={<Home />} />
         </Routes>
       </UserProvider>
     </div>
