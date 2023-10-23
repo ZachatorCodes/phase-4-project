@@ -5,7 +5,6 @@ import Home from "./components/Home";
 import { UserProvider } from "./context/user";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
-import Navbar from "./components/Navbar";
 import TrailForm from "./components/TrailForm";
 
 function App() {
