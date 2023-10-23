@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get '/hello', to: 'application#hello_world'
 
   # Trail routes
-  resources :trails, only: :index
+  resources :trails, only: [:index, :create]
 
   # User and session routes
   post '/login', to: 'sessions#create'
