@@ -9,18 +9,25 @@ function Navbar() {
   function logoutUser() {
     fetch("/logout", {
       method: "DELETE",
-      headers: {"Content-Type": "application/json"}
-    })
-    .then(() => {
+      headers: { "Content-Type": "application/json" },
+    }).then(() => {
       logout();
-      navigate("/")
+      navigate("/");
     });
   }
 
   if (loggedIn) {
     return (
       <div className="logged-in-navbar">
-        <button className="navbar-button" onClick={logoutUser}>Logout</button>
+        <NavLink to="/">
+          <button className="navbar-button">Home</button>
+        </NavLink>
+        <NavLink to="/addtrail">
+          <button className="navbar-button">Add A Trail</button>
+        </NavLink>
+        <button className="navbar-button" onClick={logoutUser}>
+          Logout
+        </button>
       </div>
     );
   } else {
