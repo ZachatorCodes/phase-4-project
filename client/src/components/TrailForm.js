@@ -31,7 +31,7 @@ function TrailForm({ onAddTrail }) {
           onAddTrail(trail);
           navigate("/");
         } else {
-          const trailErrors = trail.errors.map((e) => <li>{e}</li>);
+          const trailErrors = trail.errors.map((e) => <li key={e.id}>{e}</li>);
           setErrorList(trailErrors);
         }
       });
