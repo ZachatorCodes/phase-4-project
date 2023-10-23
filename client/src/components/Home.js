@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import Navbar from "./Navbar";
 import Trails from "./Trails";
 
-function Home() {
+function Home({trails}) {
   const { user, loggedIn } = useContext(UserContext);
 
   if (loggedIn) {
@@ -14,7 +14,7 @@ function Home() {
         <div >
           <h3>Welcome Home, {user.first_name} ☀️</h3>
         </div>
-        <Trails />
+        <Trails trails={trails}/>
       </div>
     );
   } else {
