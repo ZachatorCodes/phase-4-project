@@ -11,12 +11,10 @@ function Home() {
     return (
       <div className="home-background">
         <Navbar />
-        <div className="logged-in-home">
-          <h3>
-          Welcome Home, {user.first_name} ☀️
-          </h3>
-          <Trails />
+        <div >
+          <h3>Welcome Home, {user.first_name} ☀️</h3>
         </div>
+        <Trails />
       </div>
     );
   } else {
