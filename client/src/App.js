@@ -20,14 +20,18 @@ function App() {
       });
   }, []);
 
+  function handleAddTrail(newTrail) {
+    setTrails([...trails, newTrail]);
+  }
+
   return (
     <div className="App">
       <UserProvider>
         <Routes>
           <Route exact path="/signup" element={<Signup />} />
           <Route exact path="/login" element={<Login />} />
-          <Route exact path="/addtrail" element={<TrailForm />} />
-          <Route exact path="/" element={<Home />} />
+          <Route exact path="/addtrail" element={<TrailForm onAddTrail={handleAddTrail}/>} />
+          <Route exact path="/" element={<Home trails={trails}/>} />
         </Routes>
       </UserProvider>
     </div>
