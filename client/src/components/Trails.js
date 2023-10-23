@@ -1,8 +1,6 @@
 import React, { useContext } from "react";
-import { UserContext } from "../context/user";
 
-function Trails() {
-  const { trails } = useContext(UserContext);
+function Trails({trails}) {
 
   return (
     <div className="trails">
