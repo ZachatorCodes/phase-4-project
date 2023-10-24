@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
+import { NavLink } from "react-router-dom";
 
-function Trails({trails}) {
-
+function Trails({ trails }) {
   return (
     <div className="trails">
       {trails.map((trail) => {
@@ -20,6 +20,9 @@ function Trails({trails}) {
             <p>Length: {trail.length} miles</p>
             <p>Elevation Gain: {trail.elevation}</p>
             <p>Difficulty: {trail_difficulty}</p>
+            <NavLink to={`/trail/${trail.id}/reviews`}>
+              <button>Reviews: {trail.reviews.length}</button>
+            </NavLink>
           </div>
         );
       })}
