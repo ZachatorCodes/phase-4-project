@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   # Trail routes
   resources :trails, only: [:index, :create]
 
+  # Review routes
+  resources :reviews, only: [:create]
+
   # User and session routes
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
