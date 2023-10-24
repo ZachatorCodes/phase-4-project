@@ -12,7 +12,7 @@ function Home({trails}) {
       <div className="home-background">
         <Navbar />
         <div >
-          <h3>Welcome Home, {user.first_name} ☀️</h3>
+          <h3 className="intro-msg">Welcome Home, {user.first_name} ☀️</h3>
         </div>
         <Trails trails={trails}/>
       </div>
