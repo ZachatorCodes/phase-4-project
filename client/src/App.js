@@ -6,6 +6,7 @@ import { UserProvider } from "./context/user";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
 import TrailForm from "./components/TrailForm";
+import Profile from "./components/Profile";
 
 function App() {
   const [trails, setTrails] = useState([]);
@@ -30,6 +31,7 @@ function App() {
           <Route exact path="/signup" element={<Signup />} />
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/addtrail" element={<TrailForm onAddTrail={handleAddTrail}/>} />
+          <Route exact path="/profile" element={<Profile />} />
           <Route exact path="/" element={<Home trails={trails}/>} />
         </Routes>
       </UserProvider>
