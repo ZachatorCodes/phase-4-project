@@ -7,6 +7,7 @@ import Signup from "./components/Signup";
 import Login from "./components/Login";
 import TrailForm from "./components/TrailForm";
 import Profile from "./components/Profile";
+import TrailReviews from "./components/TrailReviews";
 
 function App() {
   const [trails, setTrails] = useState([]);
@@ -24,15 +25,38 @@ function App() {
     setTrails([...trails, newTrail]);
   }
 
+  function handleAddReview(newReview) {
+    const updatedTrails = trails.map((trail) => {
+      if (trail.id === newReview.trail_id) {
+        return {
+          ...trail,
+          reviews: [...trail.reviews, newReview],
+        };
+      } else {
+        return trail;
+      }
+    });
+    setTrails(updatedTrails);
+  }
+
   return (
     <div className="App">
       <UserProvider>
         <Routes>
           <Route exact path="/signup" element={<Signup />} />
           <Route exact path="/login" element={<Login />} />
-          <Route exact path="/addtrail" element={<TrailForm onAddTrail={handleAddTrail}/>} />
+          <Route
+            exact
+            path="/addtrail"
+            element={<TrailForm onAddTrail={handleAddTrail} />}
+          />
           <Route exact path="/profile" element={<Profile />} />
-          <Route exact path="/" element={<Home trails={trails}/>} />
+          <Route
+            exact
+            path="/trail/:id/reviews"
+            element={<TrailReviews trails={trails} onAddReview={handleAddReview}/>}
+          />
+          <Route exact path="/" element={<Home trails={trails} />} />
         </Routes>
       </UserProvider>
     </div>
