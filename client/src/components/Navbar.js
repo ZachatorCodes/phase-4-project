@@ -25,6 +25,9 @@ function Navbar() {
         <NavLink to="/addtrail">
           <button className="navbar-button">Add A Trail</button>
         </NavLink>
+        <NavLink to="/profile">
+          <button className="navbar-button">Profile</button>
+        </NavLink>
         <button className="navbar-button" onClick={logoutUser}>
           Logout
         </button>
