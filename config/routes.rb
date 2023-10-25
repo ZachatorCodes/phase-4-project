@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   resources :trails, only: [:index, :create]
 
   # Review routes
-  resources :reviews, only: [:create]
+  resources :reviews, only: [:create, :update, :destroy]
 
   # User and session routes
   post '/login', to: 'sessions#create'
