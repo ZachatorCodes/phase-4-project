@@ -6,7 +6,9 @@ class ReviewsController < ApplicationController
   end
 
   def update
-
+    review = Review.find(params[:id])
+    review.update!(update_review_params)
+    render json: review, status: :ok
   end
 
   def destroy
@@ -19,5 +21,9 @@ class ReviewsController < ApplicationController
 
   def review_params
     params.permit(:comment, :rating, :user_id, :trail_id)
+  end
+
+  def update_review_params
+    params.permit(:comment, :rating)
   end
 end
