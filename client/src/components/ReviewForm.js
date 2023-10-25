@@ -38,6 +38,7 @@ function ReviewForm({
           setErrorList([]);
           setRating(1);
           setComment("");
+          setShowReviewForm(!showReviewForm)
         } else {
           const reviewErrors = review.errors.map((e) => (
             <li key={e.id}>{e}</li>
