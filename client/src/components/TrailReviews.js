@@ -5,7 +5,7 @@ import { UserContext } from "../context/user";
 import BuildReview from "./BuildReview";
 import ReviewForm from "./ReviewForm";
 
-function TrailReviews({ trails, onAddReview }) {
+function TrailReviews({ trails, onAddReview, onDeleteReview }) {
   const { id: trailID } = useParams();
   const [showReviewForm, setShowReviewForm] = useState(false);
   const { user } = useContext(UserContext);
@@ -37,7 +37,7 @@ function TrailReviews({ trails, onAddReview }) {
           )}
           <div className="reviews">
             {chosenTrail.reviews.map((review) => (
-              <BuildReview review={review} key={review.id} />
+              <BuildReview review={review} key={review.id} onDeleteReview={onDeleteReview} />
             ))}
           </div>
         </div>
