@@ -1,10 +1,9 @@
 import React, { useContext, useState } from "react";
 import { UserContext } from "../context/user";
-import ReviewForm from "./ReviewForm";
 import UpdateReview from "./UpdateReview";
 
 function BuildReview({ review, onDeleteReview, onUpdateReview }) {
-  const { user } = useContext(UserContext);
+  const {user} = useContext(UserContext)
   const userMatch = user.id === review.user_id;
   const [showUpdateForm, setShowUpdateForm] = useState(false);
 
@@ -21,7 +20,7 @@ function BuildReview({ review, onDeleteReview, onUpdateReview }) {
   if (userMatch) {
     return (
       <div className="review">
-        <h2>Review by: {user.username}</h2>
+        <h2>Review by: {review.username}</h2>
         <h2>{review.rating} / 10</h2>
         <p>💬 {review.comment}</p>
         <button onClick={handleDelete}>Delete</button>
@@ -47,7 +46,7 @@ function BuildReview({ review, onDeleteReview, onUpdateReview }) {
   } else {
     return (
       <div className="review">
-        <h2>Review by: {user.username}</h2>
+        <h2>Review by: {review.username}</h2>
         <h2>{review.rating} / 10</h2>
         <p>💬 {review.comment}</p>
       </div>
