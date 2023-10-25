@@ -1,14 +1,12 @@
-import React, { useContext, useState } from "react";
-import { NavLink, useParams } from "react-router-dom";
+import React, { useState } from "react";
+import { useParams } from "react-router-dom";
 import Navbar from "./Navbar";
-import { UserContext } from "../context/user";
 import BuildReview from "./BuildReview";
 import ReviewForm from "./ReviewForm";
 
 function TrailReviews({ trails, onAddReview, onDeleteReview, onUpdateReview }) {
   const { id: trailID } = useParams();
   const [showReviewForm, setShowReviewForm] = useState(false);
-  const { user } = useContext(UserContext);
   const chosenTrail = trails.find((trail) => trail.id === parseInt(trailID));
 
   if (chosenTrail) {
