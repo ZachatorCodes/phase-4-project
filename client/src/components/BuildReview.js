@@ -1,20 +1,21 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { UserContext } from "../context/user";
 import ReviewForm from "./ReviewForm";
+import UpdateReview from "./UpdateReview";
 
-function BuildReview({ review, onDeleteReview }) {
+function BuildReview({ review, onDeleteReview, onUpdateReview }) {
   const { user } = useContext(UserContext);
   const userMatch = user.id === review.user_id;
+  const [showUpdateForm, setShowUpdateForm] = useState(false);
 
   function handleDelete() {
     fetch(`/reviews/${review.id}`, {
-      method: "DELETE"
-    })
-    .then(r => {
+      method: "DELETE",
+    }).then((r) => {
       if (r.ok) {
-        onDeleteReview(review)
+        onDeleteReview(review);
       }
-    })
+    });
   }
 
   if (userMatch) {
@@ -24,7 +25,23 @@ function BuildReview({ review, onDeleteReview }) {
         <h2>{review.rating} / 10</h2>
         <p>💬 {review.comment}</p>
         <button onClick={handleDelete}>Delete</button>
-        <button>Edit</button>
+        {showUpdateForm ? (
+          <>
+            <button onClick={() => setShowUpdateForm(!showUpdateForm)}>
+              Hide Form
+            </button>
+            <UpdateReview
+              review={review}
+              onUpdateReview={onUpdateReview}
+              showUpdateForm={showUpdateForm}
+              setShowUpdateForm={setShowUpdateForm}
+            />
+          </>
+        ) : (
+          <button onClick={() => setShowUpdateForm(!showUpdateForm)}>
+            Edit
+          </button>
+        )}
       </div>
     );
   } else {
