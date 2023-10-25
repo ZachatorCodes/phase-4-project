@@ -24,12 +24,6 @@
   min-height: 95.3vh;
 }
 
-.logged-in-home h3 {
-  font-size: 40px;
-  font-family: "Jost", sans-serif;
-  color: black;
-}
-
 .home-button {
   background-color: #c2fbd7;
   border-radius: 100px;
@@ -139,7 +133,7 @@ html, body {
 .signup-background h1 {
   font-size: 50px;
   font-family: 'Jost', sans-serif;;
-  color: white;
+  color: black;
 }
 
 .login-background {
@@ -153,7 +147,7 @@ html, body {
 .login-background h1 {
   font-size: 50px;
   font-family: 'Jost', sans-serif;;
-  color: white;
+  color: black;
 }
 
 .trail {
@@ -173,5 +167,90 @@ html, body {
 
 .intro-msg {
   text-align: center;
-  font-size: 2vw;
+  font-size: 2.5vw;
+  font-family: "Jost", sans-serif;
+  color: black;
+}
+
+.trail-reviews-background h1 {
+  font-size: 50px;
+  font-family: 'Jost', sans-serif;;
+  color: black;
+  text-align: center;
+}
+
+.trail-reviews-content {
+  padding: 10px;
+}
+
+.review {
+  border: 4px ridge #2471A3;
+  padding: 10px 10px;
+  margin: 10px 0;
+  background-color: #D1F2EB;
+  width: auto;
+}
+
+.add-review-button {
+  appearance: button;
+  backface-visibility: hidden;
+  background-color: #405cf5;
+  border-radius: 6px;
+  border-width: 0;
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
+  font-size: 100%;
+  height: 44px;
+  line-height: 1.15;
+  margin: 12px 0 0;
+  outline: none;
+  overflow: hidden;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transform: translateZ(0);
+  transition: all .2s,box-shadow .08s ease-in;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.close-review-button {
+  appearance: button;
+  backface-visibility: hidden;
+  background-color: red;
+  border-radius: 6px;
+  border-width: 0;
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
+  font-size: 100%;
+  height: 44px;
+  line-height: 1.15;
+  margin: 12px 0 0;
+  outline: none;
+  overflow: hidden;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transform: translateZ(0);
+  transition: all .2s,box-shadow .08s ease-in;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.trail-form-content {
+  text-align: center;
+}
+
+ul {
+  list-style-position: inside;
 }
