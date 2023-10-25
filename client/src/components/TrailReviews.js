@@ -5,13 +5,11 @@ import { UserContext } from "../context/user";
 import BuildReview from "./BuildReview";
 import ReviewForm from "./ReviewForm";
 
-function TrailReviews({ trails, onAddReview, onDeleteReview }) {
+function TrailReviews({ trails, onAddReview, onDeleteReview, onUpdateReview }) {
   const { id: trailID } = useParams();
   const [showReviewForm, setShowReviewForm] = useState(false);
   const { user } = useContext(UserContext);
   const chosenTrail = trails.find((trail) => trail.id === parseInt(trailID));
-
-  
 
   if (chosenTrail) {
     return (
@@ -37,7 +35,12 @@ function TrailReviews({ trails, onAddReview, onDeleteReview }) {
           )}
           <div className="reviews">
             {chosenTrail.reviews.map((review) => (
-              <BuildReview review={review} key={review.id} onDeleteReview={onDeleteReview} />
+              <BuildReview
+                review={review}
+                key={review.id}
+                onDeleteReview={onDeleteReview}
+                onUpdateReview={onUpdateReview}
+              />
             ))}
           </div>
         </div>
