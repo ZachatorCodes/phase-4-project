@@ -38,7 +38,7 @@ function ReviewForm({
           setErrorList([]);
           setRating(1);
           setComment("");
-          setShowReviewForm(!showReviewForm)
+          setShowReviewForm(!showReviewForm);
         } else {
           const reviewErrors = review.errors.map((e) => (
             <li key={e.id}>{e}</li>
@@ -75,6 +75,7 @@ function ReviewForm({
       </form>
       <ul>{errorList}</ul>
       <button
+        className="close-review-button"
         onClick={() => {
           setShowReviewForm(!showReviewForm);
         }}

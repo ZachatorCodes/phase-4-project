@@ -24,6 +24,7 @@ function TrailReviews({ trails, onAddReview, onDeleteReview, onUpdateReview }) {
             />
           ) : (
             <button
+              className="add-review-button"
               onClick={(e) => {
                 setShowReviewForm(!showReviewForm);
               }}
