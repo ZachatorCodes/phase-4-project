@@ -32,3 +32,5 @@ end
 gem "active_model_serializers", "~> 0.10.13"
 
 gem "bcrypt", "~> 3.1"
+
+gem "byebug", "~> 11.1", :groups => [:development, :test]
