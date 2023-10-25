@@ -39,6 +39,31 @@ function App() {
     setTrails(updatedTrails);
   }
 
+  function handleUpdateReview(updatedReview) {
+    const reviewedTrail = trails.find(
+      (trail) => trail.id === updatedReview.trail_id
+    )
+    const trailReviews = reviewedTrail.reviews
+    const updatedReviews = trailReviews.map((review) => {
+      if (review.id === updatedReview.id) {
+        return updatedReview;
+      } else {
+        return review;
+      }
+    });
+    const updatedTrails = trails.map((trail) => {
+      if (trail.id === updatedReview.trail_id) {
+        return {
+          ...trail,
+          reviews: updatedReviews,
+        };
+      } else {
+        return trail;
+      }
+    });
+    setTrails(updatedTrails);
+  }
+
   function handleDeleteReview(deletedReview) {
     const trailReviews = trails.find(
       (trail) => trail.id === deletedReview.trail_id
@@ -79,6 +104,7 @@ function App() {
                 trails={trails}
                 onAddReview={handleAddReview}
                 onDeleteReview={handleDeleteReview}
+                onUpdateReview={handleUpdateReview}
               />
             }
           />
