@@ -103,6 +103,15 @@ User.create!([
     password: "bestbeararound64!",
     password_confirmation: "bestbeararound64!",
     bio: "I like to think I'm better than Mario."
+  },
+  {
+    first_name: "Test",
+    last_name: "Test",
+    email: "test@gmail.com",
+    username: "test",
+    password: "test",
+    password_confirmation: "test",
+    bio: "I am the test user!"
   }
 ])
 
@@ -114,14 +123,20 @@ Review.create!([
   {
     trail_id: 1,
     user_id: 1,
-    rating: 10,
+    rating: 8,
     comment: "Super cool trail!"
   },
   {
-    trail_id: 2,
+    trail_id: 1,
     user_id: 2,
     rating: 3,
     comment: "I give it a meh >:("
+  },
+  {
+    trail_id: 1,
+    user_id: 3,
+    rating: 10,
+    comment: "THIS IS THE BEST TRAIL I'VE EVER DONE"
   }
 ])
 
