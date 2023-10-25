@@ -39,6 +39,26 @@ function App() {
     setTrails(updatedTrails);
   }
 
+  function handleDeleteReview(deletedReview) {
+    const trailReviews = trails.find(
+      (trail) => trail.id === deletedReview.trail_id
+    ).reviews;
+    const updatedReviews = trailReviews.filter(
+      (review) => review.id !== deletedReview.id
+    );
+    const updatedTrails = trails.map((trail) => {
+      if (trail.id === deletedReview.trail_id) {
+        return {
+          ...trail,
+          reviews: updatedReviews,
+        };
+      } else {
+        return trail;
+      }
+    });
+    setTrails(updatedTrails);
+  }
+
   return (
     <div className="App">
       <UserProvider>
@@ -54,7 +74,13 @@ function App() {
           <Route
             exact
             path="/trail/:id/reviews"
-            element={<TrailReviews trails={trails} onAddReview={handleAddReview}/>}
+            element={
+              <TrailReviews
+                trails={trails}
+                onAddReview={handleAddReview}
+                onDeleteReview={handleDeleteReview}
+              />
+            }
           />
           <Route exact path="/" element={<Home trails={trails} />} />
         </Routes>
