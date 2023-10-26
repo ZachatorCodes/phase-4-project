@@ -1,13 +1,8 @@
 import React, { useContext, useState } from "react";
 import { UserContext } from "../context/user";
 
-function ReviewForm({
-  showReviewForm,
-  setShowReviewForm,
-  onAddReview,
-  trailID,
-}) {
-  const { user } = useContext(UserContext);
+function ReviewForm({ showReviewForm, setShowReviewForm, onAddReview, trail }) {
+  const { user, setUser } = useContext(UserContext);
   const [errorList, setErrorList] = useState([]);
   const [rating, setRating] = useState(1);
   const [comment, setComment] = useState("");
@@ -17,7 +12,7 @@ function ReviewForm({
     console.log({
       rating: rating,
       comment: comment,
-      trail_id: trailID,
+      trail_id: trail.id,
       user_id: user.id,
     });
     fetch("/reviews", {
@@ -26,7 +21,7 @@ function ReviewForm({
       body: JSON.stringify({
         rating: rating,
         comment: comment,
-        trail_id: trailID,
+        trail_id: trail.id,
         user_id: user.id,
       }),
     })
@@ -39,6 +34,10 @@ function ReviewForm({
           setRating(1);
           setComment("");
           setShowReviewForm(!showReviewForm);
+          setUser({
+            ...user,
+            trails: [...user.trails, trail],
+          });
         } else {
           const reviewErrors = review.errors.map((e) => (
             <li key={e.id}>{e}</li>
