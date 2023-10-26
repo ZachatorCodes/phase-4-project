@@ -20,7 +20,7 @@ function TrailReviews({ trails, onAddReview, onDeleteReview, onUpdateReview }) {
               showReviewForm={showReviewForm}
               setShowReviewForm={setShowReviewForm}
               onAddReview={onAddReview}
-              trailID={chosenTrail.id}
+              trail={chosenTrail}
             />
           ) : (
             <button
