@@ -39,9 +39,9 @@ function ReviewForm({ showReviewForm, setShowReviewForm, onAddReview, trail }) {
             trails: [...user.trails, trail],
           });
         } else {
-          const reviewErrors = review.errors.map((e) => (
-            <li key={e.id}>{e}</li>
-          ));
+          const reviewErrors = review.errors.map((e, index) => {
+            return <li key={index}>{e}</li>
+        });
           setErrorList(reviewErrors);
         }
       });
