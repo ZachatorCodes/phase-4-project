@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+  wrap_parameters format: []
 
   def create
     review = Review.create!(review_params)
