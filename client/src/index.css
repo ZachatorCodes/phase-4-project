@@ -104,6 +104,22 @@ html, body {
   color: #2c5777;
 }
 
+.login-background {
+  background-image: url("../public/login-background.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.signup-background {
+  background-image: url("../public/signup-background.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .login-content {
   display: flex;
   flex-direction: column;
@@ -122,12 +138,26 @@ html, body {
   min-height: 95.3vh;
 }
 
-.signup-background {
-  background-image: url("../public/signup-background.jpg");
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.login-border {
+  background-color: white;
+  padding: 50px;
+  border: solid black 5px;
+}
+
+.signup-border {
+  background-color: white;
+  padding: 50px;
+  border: solid black 5px;
+}
+
+.signup-border h1 {
+  padding: 0 50px;
+}
+
+.login-background h1 {
+  font-size: 50px;
+  font-family: 'Jost', sans-serif;;
+  color: black;
 }
 
 .signup-background h1 {
@@ -136,18 +166,10 @@ html, body {
   color: black;
 }
 
-.login-background {
-  background-image: url("../public/login-background.jpg");
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.login-background h1 {
-  font-size: 50px;
-  font-family: 'Jost', sans-serif;;
-  color: black;
+ul {
+  list-style-position: inside;
+  text-align: left;
+  padding: 0;
 }
 
 .trail {
@@ -247,10 +269,3 @@ html, body {
   touch-action: manipulation;
 }
 
-.trail-form-content {
-  text-align: center;
-}
-
-ul {
-  list-style-position: inside;
-}
