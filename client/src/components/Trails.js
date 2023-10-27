@@ -21,7 +21,7 @@ function Trails({ trails }) {
             <p>Elevation Gain: {trail.elevation}</p>
             <p>Difficulty: {trail_difficulty}</p>
             <NavLink to={`/trail/${trail.id}/reviews`}>
-              <button>Reviews: {trail.reviews.length}</button>
+              <button>Reviews: {trail.number_of_reviews}</button>
             </NavLink>
           </div>
         );
