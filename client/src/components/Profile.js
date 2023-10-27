@@ -12,14 +12,16 @@ function Profile() {
         <div className="profile-background">
           <Navbar />
           <div className="profile-content">
+            <div className="profile-border">
             <h2>
               {user.first_name} {user.last_name}
             </h2>
-            <p>
+            <p className="user-info">
               Username - {user.username} | Email - {user.email}
             </p>
-            <Trails trails={user.trails} />
           </div>
+          </div>
+          <Trails trails={user.trails} />
         </div>
       );
     } else {
@@ -27,13 +29,15 @@ function Profile() {
         <div className="profile-background">
           <Navbar />
           <div className="profile-content">
+            <div className="profile-border">
             <h2>
               {user.first_name} {user.last_name}
             </h2>
             <p>
               Username - {user.username} | Email - {user.email}
             </p>
-            <h4>No reviewed trails. Get out there and review some trails!</h4>
+            <h1>No reviewed trails. Get out there and review some trails!</h1>
+          </div>
           </div>
         </div>
       );
