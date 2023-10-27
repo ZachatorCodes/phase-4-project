@@ -230,8 +230,26 @@ ul {
   text-align: center;
 }
 
+.trail-reviews-background {
+  background-image: url("../public/reviews-background.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.trail-reviews-border {
+  background-color: white;
+  padding: 20px;
+  border: solid black 5px;
+  width: 70vw;
+  margin-top: 20px;
+}
+
 .trail-reviews-content {
-  padding: 10px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 .review {
@@ -240,6 +258,14 @@ ul {
   margin: 10px 0;
   background-color: #D1F2EB;
   width: auto;
+}
+
+.reviews {
+  display: grid;
+  padding: 12px;
+  grid-gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: min-content;
 }
 
 .add-review-button {
