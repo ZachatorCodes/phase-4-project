@@ -3,7 +3,7 @@ import { UserContext } from "../context/user";
 import UpdateReview from "./UpdateReview";
 
 function BuildReview({ review, onDeleteReview, onUpdateReview }) {
-  const {user} = useContext(UserContext)
+  const { user, setUser } = useContext(UserContext);
   const userMatch = user.id === review.user_id;
   const [showUpdateForm, setShowUpdateForm] = useState(false);
 
@@ -13,6 +13,10 @@ function BuildReview({ review, onDeleteReview, onUpdateReview }) {
     }).then((r) => {
       if (r.ok) {
         onDeleteReview(review);
+        const updatedUserTrails = user.trails.filter(
+          (trail) => trail.id !== review.trail_id
+        );
+        setUser({ ...user, trails: updatedUserTrails });
       }
     });
   }
