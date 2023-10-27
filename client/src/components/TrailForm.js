@@ -53,50 +53,52 @@ function TrailForm({ onAddTrail }) {
     <div className="trail-form-background">
       <Navbar />
       <div className="trail-form-content">
-        <h1>Add A Trail</h1>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            placeholder="Trail Name"
-            name="trail_name"
-            onChange={handleChange}
-            value={trailInfo.trail_name}
-          ></input>
-          <input
-            type="number"
-            min="0"
-            placeholder="Length"
-            name="length"
-            onChange={handleChange}
-            value={trailInfo.length}
-          ></input>
-          <input
-            type="number"
-            min="0"
-            placeholder="Elevation Gain"
-            name="elevation"
-            onChange={handleChange}
-            value={trailInfo.elevation}
-          ></input>
-          <input
-            type="text"
-            placeholder="Location"
-            name="location"
-            onChange={handleChange}
-            value={trailInfo.location}
-          ></input>
-          <select
-            name="difficulty"
-            onChange={handleChange}
-            value={trailInfo.difficulty}
-          >
-            <option value={1}>Easy</option>
-            <option value={2}>Moderate</option>
-            <option value={3}>Hard</option>
-          </select>
-          <button type="submit">Add Trail</button>
-        </form>
-        <ul>{errorList}</ul>
+        <div className="trail-form-border">
+          <h1>Add A Trail</h1>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              placeholder="Trail Name"
+              name="trail_name"
+              onChange={handleChange}
+              value={trailInfo.trail_name}
+            ></input>
+            <input
+              type="number"
+              min="0"
+              placeholder="Length"
+              name="length"
+              onChange={handleChange}
+              value={trailInfo.length}
+            ></input>
+            <input
+              type="number"
+              min="0"
+              placeholder="Elevation Gain"
+              name="elevation"
+              onChange={handleChange}
+              value={trailInfo.elevation}
+            ></input>
+            <input
+              type="text"
+              placeholder="Location"
+              name="location"
+              onChange={handleChange}
+              value={trailInfo.location}
+            ></input>
+            <select
+              name="difficulty"
+              onChange={handleChange}
+              value={trailInfo.difficulty}
+            >
+              <option value={1}>Easy</option>
+              <option value={2}>Moderate</option>
+              <option value={3}>Hard</option>
+            </select>
+            <button type="submit">Add Trail</button>
+          </form>
+          <ul>{errorList}</ul>
+        </div>
       </div>
     </div>
   );
