@@ -57,6 +57,35 @@
   background-size: cover;
 }
 
+.trail-form-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 70vh;
+}
+
+.trail-form-border {
+  background-color: white;
+  padding: 50px;
+  border: solid black 5px;
+}
+
+.trail-form-background {
+  background-image: url("../public/home-background.jpg");
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.trail-form-content h1 {
+  font-size: 80px;
+  font-family: "Jost", sans-serif;
+  color: black;
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -189,7 +218,7 @@ ul {
 
 .intro-msg {
   text-align: center;
-  font-size: 2.5vw;
+  font-size: 50px;
   font-family: "Jost", sans-serif;
   color: black;
 }
