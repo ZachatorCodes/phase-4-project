@@ -324,3 +324,35 @@ ul {
   touch-action: manipulation;
 }
 
+.profile-content {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.profile-content h2 {
+  font-size: 80px;
+  font-family: "Jost", sans-serif;
+  color: black;
+  margin: 0;
+}
+
+.profile-background {
+  background-image: url("../public/profile-background.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.user-info {
+  font-size: 30px;
+}
+
+.profile-border {
+  background-color: white;
+  padding: 20px;
+  border: solid black 5px;
+  width: 70vw;
+  margin-top: 20px;
+}
