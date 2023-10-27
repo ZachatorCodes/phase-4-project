@@ -46,27 +46,29 @@ function Login() {
     <div className="login-background">
       <Navbar />
       <div className="login-content">
-        <h1>Login</h1>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="username"
-            onChange={handleChange}
-            value={userInfo.username}
-            placeholder="Username"
-            autoComplete="username"
-          ></input>
-          <input
-            type="password"
-            name="password"
-            onChange={handleChange}
-            value={userInfo.password}
-            placeholder="Password"
-            autoComplete="current-password"
-          ></input>
-          <button type="submit">Log In</button>
-        </form>
-        <ul>{error}</ul>
+        <div className="login-border">
+          <h1>Login</h1>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              name="username"
+              onChange={handleChange}
+              value={userInfo.username}
+              placeholder="Username"
+              autoComplete="username"
+            ></input>
+            <input
+              type="password"
+              name="password"
+              onChange={handleChange}
+              value={userInfo.password}
+              placeholder="Password"
+              autoComplete="current-password"
+            ></input>
+            <button type="submit">Log In</button>
+          </form>
+          <ul>{error}</ul>
+        </div>
       </div>
     </div>
   );

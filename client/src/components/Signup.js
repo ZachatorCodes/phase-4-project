@@ -55,70 +55,72 @@ function Signup() {
     <div className="signup-background">
       <Navbar />
       <div className="signup-content">
-        <h1>Sign Up</h1>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="first_name"
-            onChange={handleChange}
-            value={userInfo.first_name}
-            placeholder="First Name"
-          ></input>
-          <br />
-          <input
-            type="text"
-            name="last_name"
-            onChange={handleChange}
-            value={userInfo.last_name}
-            placeholder="Last Name"
-          ></input>
-          <br />
-          <input
-            type="email"
-            name="email"
-            onChange={handleChange}
-            value={userInfo.email}
-            placeholder="Email"
-          ></input>
-          <br />
-          <input
-            type="text"
-            name="username"
-            onChange={handleChange}
-            value={userInfo.username}
-            placeholder="Username"
-            autoComplete="username"
-          ></input>
-          <br />
-          <input
-            type="password"
-            name="password"
-            onChange={handleChange}
-            value={userInfo.password}
-            placeholder="Password"
-            autoComplete="new-password"
-          ></input>
-          <br />
-          <input
-            type="password"
-            name="password_confirmation"
-            onChange={handleChange}
-            value={userInfo.password_confirmation}
-            placeholder="Password Confirmation"
-            autoComplete="new-password"
-          ></input>
-          <br />
-          <textarea
-            type="textarea"
-            name="bio"
-            onChange={handleChange}
-            value={userInfo.bio}
-            placeholder="Bio"
-          ></textarea>
-          <br />
-          <button type="submit">Sign Up</button>
-        </form>
-        <ul>{errorList}</ul>
+        <div className="signup-border">
+          <h1>Sign Up</h1>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              name="first_name"
+              onChange={handleChange}
+              value={userInfo.first_name}
+              placeholder="First Name"
+            ></input>
+            <br />
+            <input
+              type="text"
+              name="last_name"
+              onChange={handleChange}
+              value={userInfo.last_name}
+              placeholder="Last Name"
+            ></input>
+            <br />
+            <input
+              type="email"
+              name="email"
+              onChange={handleChange}
+              value={userInfo.email}
+              placeholder="Email"
+            ></input>
+            <br />
+            <input
+              type="text"
+              name="username"
+              onChange={handleChange}
+              value={userInfo.username}
+              placeholder="Username"
+              autoComplete="username"
+            ></input>
+            <br />
+            <input
+              type="password"
+              name="password"
+              onChange={handleChange}
+              value={userInfo.password}
+              placeholder="Password"
+              autoComplete="new-password"
+            ></input>
+            <br />
+            <input
+              type="password"
+              name="password_confirmation"
+              onChange={handleChange}
+              value={userInfo.password_confirmation}
+              placeholder="Password Confirmation"
+              autoComplete="new-password"
+            ></input>
+            <br />
+            <textarea
+              type="textarea"
+              name="bio"
+              onChange={handleChange}
+              value={userInfo.bio}
+              placeholder="Bio"
+            ></textarea>
+            <br />
+            <button type="submit">Sign Up</button>
+          </form>
+          <ul>{errorList}</ul>
+        </div>
       </div>
     </div>
   );

@@ -9,7 +9,7 @@ function Home({trails}) {
 
   if (loggedIn) {
     return (
-      <div className="logged-in-home-background">
+      <div className="home-background">
         <Navbar />
         <div >
           <h3 className="intro-msg">Welcome Home, {user.first_name} ☀️</h3>
