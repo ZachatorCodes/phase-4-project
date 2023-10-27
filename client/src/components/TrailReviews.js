@@ -14,34 +14,36 @@ function TrailReviews({ trails, onAddReview, onDeleteReview, onUpdateReview }) {
       <div className="trail-reviews-background">
         <Navbar />
         <div className="trail-reviews-content">
-          <h1>Reviews For {chosenTrail.trail_name}</h1>
-          {showReviewForm ? (
-            <ReviewForm
-              showReviewForm={showReviewForm}
-              setShowReviewForm={setShowReviewForm}
-              onAddReview={onAddReview}
-              trail={chosenTrail}
-            />
-          ) : (
-            <button
-              className="add-review-button"
-              onClick={(e) => {
-                setShowReviewForm(!showReviewForm);
-              }}
-            >
-              Add Review
-            </button>
-          )}
-          <div className="reviews">
-            {chosenTrail.reviews.map((review) => (
-              <BuildReview
-                review={review}
-                key={review.id}
-                onDeleteReview={onDeleteReview}
-                onUpdateReview={onUpdateReview}
+          <div className="trail-reviews-border">
+            <h1>Reviews For {chosenTrail.trail_name}</h1>
+            {showReviewForm ? (
+              <ReviewForm
+                showReviewForm={showReviewForm}
+                setShowReviewForm={setShowReviewForm}
+                onAddReview={onAddReview}
+                trail={chosenTrail}
               />
-            ))}
+            ) : (
+              <button
+                className="add-review-button"
+                onClick={(e) => {
+                  setShowReviewForm(!showReviewForm);
+                }}
+              >
+                Add Review
+              </button>
+            )}
           </div>
+        </div>
+        <div className="reviews">
+          {chosenTrail.reviews.map((review) => (
+            <BuildReview
+              review={review}
+              key={review.id}
+              onDeleteReview={onDeleteReview}
+              onUpdateReview={onUpdateReview}
+            />
+          ))}
         </div>
       </div>
     );
