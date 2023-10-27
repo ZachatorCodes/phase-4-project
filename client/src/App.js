@@ -30,6 +30,7 @@ function App() {
       if (trail.id === newReview.trail_id) {
         return {
           ...trail,
+          number_of_reviews: trail.number_of_reviews + 1,
           reviews: [...trail.reviews, newReview],
         };
       } else {
@@ -42,8 +43,8 @@ function App() {
   function handleUpdateReview(updatedReview) {
     const reviewedTrail = trails.find(
       (trail) => trail.id === updatedReview.trail_id
-    )
-    const trailReviews = reviewedTrail.reviews
+    );
+    const trailReviews = reviewedTrail.reviews;
     const updatedReviews = trailReviews.map((review) => {
       if (review.id === updatedReview.id) {
         return updatedReview;
@@ -76,6 +77,7 @@ function App() {
         return {
           ...trail,
           reviews: updatedReviews,
+          number_of_reviews: trail.number_of_reviews - 1,
         };
       } else {
         return trail;
