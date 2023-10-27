@@ -36,12 +36,15 @@ function ReviewForm({ showReviewForm, setShowReviewForm, onAddReview, trail }) {
           setShowReviewForm(!showReviewForm);
           setUser({
             ...user,
-            trails: [...user.trails, trail],
+            trails: [
+              ...user.trails,
+              { ...trail, number_of_reviews: trail.number_of_reviews + 1 },
+            ],
           });
         } else {
           const reviewErrors = review.errors.map((e, index) => {
-            return <li key={index}>{e}</li>
-        });
+            return <li key={index}>{e}</li>;
+          });
           setErrorList(reviewErrors);
         }
       });
