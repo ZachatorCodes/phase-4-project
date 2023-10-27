@@ -19,6 +19,7 @@ function Profile() {
             <p className="user-info">
               Username - {user.username} | Email - {user.email}
             </p>
+            <p className="user-info">Bio: {user.bio}</p>
           </div>
           </div>
           <Trails trails={user.trails} />
@@ -33,9 +34,10 @@ function Profile() {
             <h2>
               {user.first_name} {user.last_name}
             </h2>
-            <p>
+            <p className="user-info">
               Username - {user.username} | Email - {user.email}
             </p>
+            <p className="user-info">Bio: {user.bio}</p>
             <h1>No reviewed trails. Get out there and review some trails!</h1>
           </div>
           </div>
