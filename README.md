@@ -7,32 +7,25 @@ This repository contains both the frontend and backend code required to get the 
 ## Technologies Used
 
 * Ruby - Version 3.2.2
+
 * Ruby on Rails - Version 7.0.8
+
 * React - Version 8.2.0
-* BCrypt - Version 3.1
+
+* BCrypt - Version 3.1.0
+
 * React Router - Version 6.16.0
 
-BunkTrails is built using Ruby (3.2.2), Ruby on Rails (7.0.8), and React (8.2.0), as well as using the BCrypt gem (3.1) and the React Router npm package (6.16.0).
+## Installation
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1. To install the application, please `fork` and `clone` this repository to your local device. Make sure to `fork` the repository before you `clone` it.
 
-Things you may want to cover:
+2. `cd` into the folder of the cloned repository, and run `bundle install`. This will install the backend dependencies.
 
-* Ruby version
+3. Run `npm install --prefix client`. This will install the frontend dependencies.
 
-* System dependencies
+4. Run `rails s` to start the backend server.
 
-* Configuration
+5. In another terminal window [^1], `cd` into the folder of the cloned repository and run `npm start --prefix client` to start the frontend server.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[^1] NOTE: The frontend server and the backend server need to be run in seperate terminal windows.
