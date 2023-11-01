@@ -24,7 +24,7 @@ This repository contains both the frontend and backend code required to get the 
 
 3. Run `npm install --prefix client`. This will install the frontend dependencies.
 
-4. Run `rails db:migrate` and `rails db:seed` to migrate and seed the database. If any errors occur during this step, run `rails db:reset` to recreate the database from the migrations and reseed the data.
+4. Run `rails db:migrate` and `rails db:seed` to migrate and seed the database. If any errors occur during this step, run `rails db:reset` to recreate the database from the migrations and reseed the data, and then proceed directly to step 5.
 
 5. Run `rails s` to start the backend server.
 
