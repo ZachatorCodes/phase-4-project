@@ -24,8 +24,12 @@ This repository contains both the frontend and backend code required to get the 
 
 3. Run `npm install --prefix client`. This will install the frontend dependencies.
 
-4. Run `rails s` to start the backend server.
+4. Run `rails db:migrate` and `rails db:seed` to migrate and seed the database. If any errors occur during this step, run `rails db:reset` to recreate the database from the migrations and reseed the data.
 
-5. In another terminal window [^1], `cd` into the folder of the cloned repository and run `npm start --prefix client` to start the frontend server.
+5. Run `rails s` to start the backend server.
 
-[^1] NOTE: The frontend server and the backend server need to be run in seperate terminal windows.
+6. In another terminal window, `cd` into the folder of the cloned repository and run `npm start --prefix client` to start the frontend server.
+
+NOTE: The frontend server and the backend server need to be run in seperate terminal windows.
+
+If all goes well, you should be able to see the app locally in your browser at `http://localhost:4000/`
