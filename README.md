@@ -4,7 +4,15 @@ BunkTrails is a web application that can be used to store information about spec
 
 This repository contains both the frontend and backend code required to get the application running.
 
-BunkTrails is built using Ruby 3.2.2, Rails 7.0.8, and React 8.2.0, as well as using the BCrypt gem (3.1) and the React Router npm package (6.16.0).
+## Technologies Used
+
+* Ruby - Version 3.2.2
+* Ruby on Rails - Version 7.0.8
+* React - Version 8.2.0
+* BCrypt - Version 3.1
+* React Router - Version 6.16.0
+
+BunkTrails is built using Ruby (3.2.2), Ruby on Rails (7.0.8), and React (8.2.0), as well as using the BCrypt gem (3.1) and the React Router npm package (6.16.0).
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
