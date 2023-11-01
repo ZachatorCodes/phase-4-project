@@ -18,7 +18,7 @@ This repository contains both the frontend and backend code required to get the 
 
 ## Installation
 
-1. To install the application, please `fork` and `clone` this repository to your local device. Make sure to `fork` the repository before you `clone` it.
+1. To install the application, `fork` and `clone` this repository to your local device. Make sure to `fork` the repository before you `clone` it.
 
 2. `cd` into the folder of the cloned repository, and run `bundle install`. This will install the backend dependencies.
 
