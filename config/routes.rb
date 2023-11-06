@@ -20,6 +20,9 @@ Rails.application.routes.draw do
   get "/me", to: "users#show"
   post "/signup", to: "users#create"
 
+  # Live Coding Assessment
+  get '/trail_reviews/:n', to: 'trails#trail_reviews'
+
   # Handles non-API route requests
   get '*path', to: 'fallback#index', constraints: ->(req) { !req.xhr? && req.format.html? }
   
